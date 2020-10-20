@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>IMC</title>
+	<meta charset="utf-8">
+    <!-- bootstrap --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <style type="text/css">
+    	#titulo
+    	{
+    		font-family: 'Luckiest Guy', cursive;
+    		color:#00802b;
+    	}
+    	.formulario
+    	{
+    		background-color: #33ccff;
+    		margin: 0 20% 0 20%;
+    		padding: 0 0 0 20%;
+    		border-radius: 30px;
+    	}
+    	button
+    	{
+    		margin-top: 2%;
+    	}
+        p
+        {
+            margin-top: 3%;
+        }
+    </style>
+</head>
+<body>
+	<div class="container-fluid">
+		<p class="text-center display-4" id="titulo">CÁLCULO DO IMC</p>
+		<div class="formulario">			
+		    <form>
+		    	<div>
+			    	<label for="peso" class="font-weight-bold">PESO:</label>
+			    	<input type="text" name="peso" id="peso" class="col-sm-4 form-control" placeholder="ex: 75" required>
+                </div>
+                <div>  
+			    	<label for="altura" class="font-weight-bold">ALTURA:</label>
+			    	<input type="text" name="altura" id="altura" class="col-sm-4 form-control" placeholder="ex: 1.80" required>
+			    </div>
+                 
+           <p>
+            <label>
+                <input type="radio" name="sexo" value="masculino" id="sexo_0" />Masculino</label>
+            <br />
+            <label>
+                <input type="radio" name="sexo" value="feminino" id="sexo_1" />Feminino</label>
+            </p>
+            
+		    	<button class="btn-danger btn" onclick="calculaIMC()">CALCULAR</button>
+		    </form>
+           
+		</div>
+    </div>
+
+	<script type="text/java" src="logica.js"></script>     
+</body>
+</html>
